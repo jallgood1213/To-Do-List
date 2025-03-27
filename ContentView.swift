@@ -5,6 +5,8 @@
 //  Created by Josh Allgood on 3/26/25.
 //
 
+
+           
 import SwiftUI
 
 struct ContentView: View {
@@ -15,7 +17,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            HStack {
+            VStack {
                 TextField("New Task", text: $newTaskTitle)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 DatePicker("", selection: $selectedDate, displayedComponents: [.date, .hourAndMinute])
@@ -54,6 +56,11 @@ struct ContentView: View {
         .padding()
     }
 }
+
+#Preview {
+    ContentView()
+}
+
 
 #Preview {
     ContentView()
